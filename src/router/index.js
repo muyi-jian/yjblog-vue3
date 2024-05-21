@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory} from "vue-router";
 import Index from "@/pages/frontend/index.vue"
 import Login from "@/pages/admin/login.vue"
+import AdminIndex from '@/pages/admin/index.vue'
 
 // 统一声明所有路由
 const routes = [
@@ -15,6 +16,13 @@ const routes = [
         component: Login,
         meta: {
             title: "登录"
+        }
+    },
+    {
+        path: "/admin/index", // 后台首页
+        component: AdminIndex,
+        meta: {
+            title: 'Admin 后台首页'
         }
     }
 ]
