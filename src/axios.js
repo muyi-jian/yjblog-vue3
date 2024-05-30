@@ -1,6 +1,7 @@
 import axios from "axios";
-import { getToken } from "@/composables/auth";
 import { showMessage} from '@/composables/util'
+import { getToken } from "@/composables/cookie"
+
 
 // 创建 Axios 实例
 const instance = axios.create({
