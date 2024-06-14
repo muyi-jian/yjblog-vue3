@@ -20,11 +20,7 @@ import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
-// 跳转标签文章列表页
-const goTagArticleListPage = (id, name) => {
-  // 跳转时通过 query 携带参数（标签 ID、标签名称）
-  router.push({path: '/tag/article/list', query: {id, name}})
-}
+
 // 所有标签
 const tags = ref([])
 getTagList().then((res) => {
@@ -33,5 +29,9 @@ getTagList().then((res) => {
     }
 })
 
-
+// 跳转标签文章列表页
+const goTagArticleListPage = (id, name) => {
+    // 跳转时通过 query 携带参数（标签 ID、标签名称）
+    router.push({path: '/tag/article/list', query: {id, name}})
+}
 </script>
